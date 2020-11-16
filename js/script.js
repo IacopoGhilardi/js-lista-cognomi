@@ -20,12 +20,16 @@ cognomi.push(cognomeUtente);
 
 console.log(cognomi);
 cognomi = cognomi.sort();
+for (var j = 0; j < cognomi.length; j++) {
+    document.getElementById('array').innerHTML += "<li>" + cognomi[j] + "</li>";
+}
+
 //stampo la lista ordinata
 console.log(cognomi);
 
 //stampo la posizione del cognome
 for (var i = 0; i < cognomi.length; i++) {
   if (cognomi[i] == cognomeUtente) {
-    console.log("La posizione del cognome è: ", (i+1));
+    document.getElementById('position').innerHTML = i + 1;
   }
 }
