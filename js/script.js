@@ -6,6 +6,13 @@
 //chiedo all'utente il cognome
 var cognomeUtente = prompt("Inserisci il tuo cognome");
 //Trasformo la prrima lettera in maiuscola
+
+
+while (!isNaN(cognomeUtente)) {
+  alert("Puoi inserire solo una stringa");
+  cognomeUtente = prompt("Inserisci il tuo cognome");
+}
+
 cognomeUtente = cognomeUtente[0].toUpperCase() + cognomeUtente.slice(1);
 
 var cognomi = ['Pesce', 'Grimaldi', 'Passaro', 'Castenetto', 'Rossi', 'Verdi', 'Bianchi'];
