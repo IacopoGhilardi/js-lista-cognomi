@@ -5,28 +5,27 @@
 
 //chiedo all'utente il cognome
 var cognomeUtente = prompt("Inserisci il tuo cognome");
-//Trasformo la prrima lettera in maiuscola
+
 
 while (!isNaN(cognomeUtente)) {
   alert("Puoi inserire solo una stringa");
   cognomeUtente = prompt("Inserisci il tuo cognome");
 }
 
-cognomeUtente = cognomeUtente[0].toUpperCase() + cognomeUtente.slice(1);
-
 var cognomi = ['Pesce', 'Grimaldi', 'Passaro', 'Castenetto', 'Rossi', 'Verdi', 'Bianchi'];
-//aggiungo il cognome all'array
+//aggiungo il cognome all'array trasformando la prima lettera
+cognomeUtente = cognomeUtente.toLowerCase();
+cognomeUtente = cognomeUtente[0].toUpperCase() + cognomeUtente.slice(1);
 cognomi.push(cognomeUtente);
 
-var sorted = cognomi.sort();
 console.log(cognomi);
+cognomi = cognomi.sort();
 //stampo la lista ordinata
-console.log(sorted);
+console.log(cognomi);
 
 //stampo la posizione del cognome
-for (var i = 0; i < sorted.length; i++) {
-  if (sorted[i] == cognomeUtente){
+for (var i = 0; i < cognomi.length; i++) {
+  if (cognomi[i] == cognomeUtente) {
     console.log("La posizione del cognome è: ", (i+1));
   }
-
 }
